@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+::-webkit-scrollbar{
+    display:none;
+}
+:root{
+    --Paleblue: hsl(225, 100%, 94%);
+    --Brightblue: hsl(245, 75%, 52%);
+    --Verypaleblue: hsl(225, 100%, 98%); 
+    --Desaturatedblue: hsl(224, 23%, 55%); 
+    --Darkblue: hsl(223, 47%, 23%);
+}
+/* - Font size (paragraph): 16px */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+body{
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./images/pattern-background-desktop.svg) no-repeat,var(--Paleblue);
+}
+main{
+    min-height:80vh;
+    width:50vh;
+    background-color: white;
+    border-radius:20px;
+    display:flex;
+    flex-direction:column;
+}
+.header{
+    flex-grow: 3;
+    flex-shrink:0;
+    border-radius:20px 20px 0 0;
+    background:url(./images/illustration-hero.svg) no-repeat,hsl(245, 75%, 52%);
+    background-position: bottom;
+    background-size: contain;   
+    align-content:flex-start;
+}
+.content{
+    flex-grow:1;
+    flex-shrink:0;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    padding:30px;
+    border-radius: 0 0 20px 20px;
+    /* gap:10px; */
+}
+.content>*{
+    flex-basis:100%;
+    flex-shrink:0;
+    text-align:center;
+    height: fit-content;
+}
+.heading{
+    font-weight:900;
+    font-size: 25px;
+}
+.text{
+    font-size:16px;
+    color: var(--Desaturatedblue);
+}
+.pricing{
+    border-radius:10px;
+    padding:20px;
+    background-color: var(--Verypaleblue);
+    display: flex;
+    flex-flow:row wrap;
+    align-items:center;  
+    gap:10px;  
+}
+.pricing>*{
+    height:fit-content;
+}
+.icon{
+    display: flex;
+    align-items:center;
+    border-radius:50%;
+}
+.plan{
+    font-size:14px;
+    font-weight:500;
+    color:var(--Desaturatedblue);
+    text-align: start;
+}
+span{
+    font-weight:700;
+    color:var(--Darkblue);
+}
+.hyperlink{
+    color:blue;
+    text-decoration: underline;
+    font-weight:700;
+    font-size:13px;
+    margin-left:auto;
+    transition: color 1s ease-in;
+}
+.button1{
+    font-weight:700;
+    font-size:13px;
+    background:var(--Brightblue);
+    color:white;
+    line-height:50px; /* idk just wanted to use line-height instead of padding*/
+    border-radius:10px;
+    box-shadow: 0 20px 10px var(--Paleblue);
+    transition: color 1s ease-in ;
+}
+.button2{
+    font-size:13px;
+    font-weight:700;
+    color:var(--Desaturatedblue);
+    transition: color 1s ease-in;
+}
+.hyperlink:hover{
+    color:var(--Desaturatedblue);
+    text-decoration: none;
+    cursor: pointer;
+}
+.button1:hover{
+    text-decoration: none;
+    cursor: pointer;
+    background:hsla(245, 75%, 52%,0.8);
+    box-shadow:none;
+}
+.button2:hover{
+    color:black;
+    cursor:pointer;
+}
+@media screen and (max-width:375px) {
+    body{
+        padding:40px 20px 40px 20px;
+    }
+    
+}
